@@ -232,6 +232,7 @@ border-top-left-radius: 0px;}
      }
 .still{
     display: inherit;
+    margin: 0 auto;
 }
 .gif{display: none;}
   #plane{

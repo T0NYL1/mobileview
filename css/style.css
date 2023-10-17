@@ -227,8 +227,8 @@ border-top-left-radius: 0px;}
       -webkit-transition: none; 
       transition: none;
      }
-  .prof{
-    animation-play-state: paused;
+#travel .prof{
+    animation-play-state: initial;
   }
   #plane{
     display:none;

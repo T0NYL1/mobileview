@@ -198,25 +198,28 @@ border-top-left-radius: 0px;}
 #travel .prof{
     border: 7px solid black;
 }
+.still{
+    display:none;
+}
 
 #plane {
     width: 100px;
     height: 100px;
     background-color: red;
     position: relative;
-    animation-name: example;
+    animation-name: fly;
     animation-duration: 30s;
     animation-iteration-count: infinite;
     border-radius: 50%;
     border:3px solid black;
   }
-  
-  @keyframes example {
-    0%   {background-color:rgb(241, 241, 241); left:0px; top:0px;}
-    25%  {background-color:rgb(241, 241, 241); left:80%; top:0px;}
-    50%  {background-color:rgb(241, 241, 241); left:80%; top:10000px;}
-    75%  {background-color:rgb(241, 241, 241); left:0px; top:10000px;}
-    100% {background-color:rgb(241, 241, 241); left:0px; top:0px;}
+
+  @keyframes fly {
+    0%   {transform: rotate(90deg);background-color:rgb(241, 241, 241); left:0px; top:0px;}
+    25%  {transform: rotate(180deg);background-color:rgb(241, 241, 241); left:80%; top:0px;}
+    50%  {transform: rotate(270deg);background-color:rgb(241, 241, 241); left:80%; top:12000px;}
+    75%  {transform: rotate(360deg);background-color:rgb(241, 241, 241); left:0px; top:12000px;}
+    100% {transform: rotate(90deg);background-color:rgb(241, 241, 241); left:0px; top:0px;}
   }
 
   @media screen and (prefers-reduced-motion: reduce){
@@ -227,9 +230,10 @@ border-top-left-radius: 0px;}
       -webkit-transition: none; 
       transition: none;
      }
-#travel .prof{
-    animation-play-state: initial;
-  }
+.still{
+    display: inherit;
+}
+.gif{display: none;}
   #plane{
     display:none;
   }

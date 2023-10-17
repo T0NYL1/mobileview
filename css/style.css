@@ -105,7 +105,6 @@ h3{font-size:22px;
 #pet .ll{
     border-bottom-left-radius: 50px;
 }
-#pet p{ padding: 10px}
 
 #food .out{text-decoration: underline;}
 
@@ -239,3 +238,6 @@ border-top-left-radius: 0px;}
     display:none;
   }
   }
+  #pet{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+  #food{font-family: Verdana, Geneva, Tahoma, sans-serif;}
+  #travel{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}

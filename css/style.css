@@ -16,11 +16,14 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
     position: absolute;
     top: -40px;
     left:0;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
   }
 #skip:focus{
     top:20px;
     background-color:aliceblue;
 }
+li{padding:1%}
 nav li{
     display: inline-block;
 padding: 2%;
@@ -66,16 +69,168 @@ h3{font-size:22px;
     background-color: cornsilk;
 }
 
-#pet img{
+#pet img, #food img{
  width:210px;
  height: 210px;
+ border:solid 4px royalblue;
 }
 
-#pet .prof{
+#pet .prof, #food .prof{
     width: 400px;
     height: 500px;
+    border-radius: 50px;
+    border: solid 5px rgb(17, 88, 171);
+}
+
+#food .prof{
+    border: rgb(219, 114, 114) solid 5px
+}
+
+#food img{
+    border:solid 4px rgb(170, 72, 72);  
 }
 
 #pet div{
     border: solid 2px black
 }
+#pet .tl{
+    border-top-left-radius: 50px;
+}
+#pet .rl{
+    border-bottom-right-radius: 50px;
+}
+#pet .tr{
+    border-top-right-radius: 50px;
+}
+#pet .ll{
+    border-bottom-left-radius: 50px;
+}
+#pet p{ padding: 10px}
+
+#food .out{text-decoration: underline;}
+
+#food h2{background-color: blanchedalmond;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+#food h3{background-color: aliceblue;
+margin:0 auto;
+max-width: fit-content;}
+
+#food p, .container li{
+    background-color: rgb(239, 210, 172);
+    width: 70%;
+    max-width: fit-content;
+    margin:0 auto;
+    font-size: 16px;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+ol{
+    background-color: bisque;
+    width: 50%;
+    max-width: fit-content;
+    margin:0 auto;
+}
+
+#travel h2,#travel h3, #travel h4{background-color: aquamarine;
+    max-width: fit-content;
+    padding:2%;
+    margin:0 auto;
+border-top-right-radius: 15px;
+border-top-left-radius: 15px;}
+
+#travel p{
+    background-color: rgba(255, 255, 255,0.8);
+    padding: 3%;
+    max-width: fit-content;
+    margin: 0 auto;
+    width: 80%;
+    border: 2px solid black
+}
+#travel h3{background-color:gold;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;}
+#travel h4{background-color:lightskyblue;}
+
+#travel .grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.p1,.i1{grid-row: 1;}
+.p2,.i2{grid-row:2;}
+.p3,.i3{grid-row:3}
+.p4,.i4{grid-row:4;}
+.p5,.i5{grid-row:5;}
+
+.p1,.p2,.p3,.p4,.p5{
+    align-self: center;
+    text-align: center;
+    margin:0 auto;
+    max-height: 70%;
+    overflow: scroll;
+}
+
+.p1,.i2,.p3,.i4,.p5{
+    grid-column: 1;
+}
+.i1,.p2,.i3,.p4,.i5{
+    grid-column: 2;
+}
+.i1,.i2,.i3,.i4,.i5{align-self: center;
+    width: 90%;
+    grid-column: 1/span 2;
+    margin:0 auto;
+    border: 5px solid black;
+}
+
+#travel .prof{
+    border: 7px solid black;
+}
+
+#plane {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    border:3px solid black;
+  }
+  
+  @keyframes example {
+    0%   {background-color:rgb(241, 241, 241); left:0px; top:0px;}
+    25%  {background-color:rgb(241, 241, 241); left:80%; top:0px;}
+    50%  {background-color:rgb(241, 241, 241); left:80%; top:10000px;}
+    75%  {background-color:rgb(241, 241, 241); left:0px; top:10000px;}
+    100% {background-color:rgb(241, 241, 241); left:0px; top:0px;}
+  }
+
+  @media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+    #skip{
+      -webkit-transition: none; 
+      transition: none;
+     }
+  .prof{
+    animation-play-state: paused;
+  }
+  #plane{
+    display:none;
+  }
+  }
